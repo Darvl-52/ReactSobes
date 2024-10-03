@@ -1,0 +1,14 @@
+  @import
+  'normalize',
+  'fonts',
+  'globals',
+  'media',
+  'mixins',
+  'utils',
+  'variables';
+
+  @import "../components/header/header";
+  @import "../components/main/main";
+  @import "../components/card/card";
+  @import "../components/singlePage/singlePage";
+  @import "../components/modal/modal";

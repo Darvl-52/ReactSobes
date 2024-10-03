@@ -1,0 +1,39 @@
+@import '../../styles/media';
+
+.header {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__right {
+    display: inline-flex;
+  }
+
+  &__notif {
+    display: inline-flex;
+    column-gap: 8px;
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.profile {
+  display: inline-flex;
+  margin-left: 20px;
+  column-gap: 8px;
+
+  &__img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: var(--color-gray2);
+  }
+}

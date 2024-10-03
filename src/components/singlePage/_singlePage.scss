@@ -1,0 +1,198 @@
+@import "../../styles/media";
+@import "../../styles/mixins";
+
+.main {
+  margin-top: 20px;
+  position: relative;
+
+  &__arrow {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-gray2);
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+}
+
+.data {
+  margin-top: 45px;
+  display: flex;
+  column-gap: 40px;
+  justify-content: center;
+  
+  @include desktop {
+    row-gap: 32px;
+  }
+
+  @media (max-width: 1160px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    padding: 40px;
+    row-gap: 40px;
+    border-radius: 16px;
+    background-color: var(--color-white);
+
+    @media (max-width: 1160px) {
+      max-width: 100%;
+    }
+
+    &-avatar {
+      @include desktop {
+        @include flex-center(true);
+      }
+    }
+
+    @include desktop {
+      padding: 28px;
+    }
+
+    &-title {
+      font-size: 16px;
+      color: var(--color-gray-dark);
+      margin-bottom: 12px;
+
+      @include desktop {
+        font-size: 14px;
+      }
+    }
+
+    &-form {
+      display: grid;
+      row-gap: 12px;
+
+      @include desktop {
+        row-gap: 8px;
+      }
+    }
+
+    &-input {
+      @include reset-input;
+
+      padding-top: 24px;
+      padding-bottom: 12px;
+      border-top: 1px solid var(--color-light-gray);
+      border-bottom: 1px solid var(--color-light-gray);
+
+      @include desktop {
+        padding-top: 20px;
+        padding-bottom: 8px;
+      }
+
+      &::placeholder {
+        font-size: 16px;
+        color: var( --color-gray);
+
+        @include desktop {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    @media (max-width: 1161px) {
+      display: grid;
+      justify-content: center;
+    }
+  }
+
+  &__right {
+    max-width: 760px;
+    width: 100%;
+    padding: 40px;
+    background-color: var(--color-white);
+
+    @include desktop {
+      padding: 28px;
+    }
+
+    &-text {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+
+    &-form {
+      display: grid;
+      row-gap: 24px;
+
+      @include desktop {
+        row-gap: 20px;
+      }
+    }
+
+    &-input {
+      @include reset-input;
+
+      height: var(--input-hight);
+      width: 100%;
+      padding: 0 8px 0 16px;
+      border-radius: var(--input-border-radius);
+      border: 2px solid var(--color-light-gray);
+      font-size: 16px;
+
+      @include desktop {
+        font-size: 14px;
+      }
+
+      &::placeholder {
+        font-size: 16px;
+        color: var( --color-gray);
+
+        @include desktop {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-wrapper {
+      @include tablet {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &-save {
+      @include reset-btn;
+
+      padding: 12px 42px;
+      max-width: 287px;
+      border-radius: var(--border-radius);
+      background-color: var(--color-gray-dark);
+      color: var(--color-white);
+      font-weight: 600;
+      margin-top: 8px;
+      font-size: 16px;
+
+      @include hover {
+        background-color: var(--color-white2);
+        color: var(--color-gray2);
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}
